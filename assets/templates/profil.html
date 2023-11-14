@@ -19,7 +19,7 @@
          <nav>
             <ul class="navbar">
                <li><a href="../templates/home.html">Accueil</a></li>
-               <li><button class="button__logout">Déconnexion</button></li>
+               <li><button class="button__logout" role="button">Déconnexion</button></li>
             </ul>
          </nav>
       </header>
@@ -30,7 +30,11 @@
          <form action="" class="login__form" id="login__form">
             <h1 class="login__title">Profil</h1>
 
-
+            <div class="profil">
+                <p>Email : <?php echo $email; ?> </p>
+                <br>
+                <p>Pseudo : <?php echo $pseudo; ?> </p>
+            </div>
 
 
          </form>
