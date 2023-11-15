@@ -30,7 +30,7 @@ app.post('/connexion_compte', (req, res) => {
 });
 
 // Route pour "/documents"
-app.get('/', (req, res) => {
+app.get('/acceuil', (req, res) => {
     res.sendFile(__dirname+'/templates/acceuil.html');
 });
 
@@ -44,6 +44,11 @@ app.get('/register', (req, res) => {
     res.sendFile(__dirname + '/templates/register.html');
 });
 
+// Route pour "/profil"
+app.get('/profil', (req, res) => {
+    res.sendFile(__dirname + '/templates/profil.html');
+});
+
 app.listen(port, () => {
-    console.log(`Le serveur est lancé sur http://localhost:${port}`);
+    console.log(`Le serveur est lancé sur http://localhost:${port}/acceuil`);
 });
