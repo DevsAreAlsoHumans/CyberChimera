@@ -3,6 +3,7 @@ package java.Users;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.service.serviceRegistration;
 
 /**
  * User
@@ -76,7 +77,13 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
     // registration
+    public void userRegistration() {
+        serviceRegistration registration = new serviceRegistration();
+        registration.userRegistration(null);
+
+    }
     // login
     // updateUserInfo
     // logout
