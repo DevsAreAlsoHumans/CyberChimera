@@ -148,6 +148,7 @@ img {
   object-fit: cover;
   object-position: center;
 }
+
 .login__form {
   position: relative;
   background-color: hsla(0, 0%, 10%, 0.1);
@@ -157,6 +158,23 @@ img {
   border-radius: 1rem;
   backdrop-filter: blur(8px);
 }
+
+/* Définition de l'animation de bordure */
+@keyframes borderAnimation {
+  0% { border-color: rgb(255, 0, 0); }
+  25% { border-color: rgb(0, 255, 0); }
+  50% { border-color: rgb(0, 0, 255); }
+  75% { border-color: rgb(255, 255, 0); }
+  100% { border-color: rgb(255, 0, 0); }
+}
+
+/* Appliquer l'animation seulement au survol */
+.login__form:hover {
+  animation: borderAnimation 4s infinite linear;
+}
+
+
+
 .login__title {
   text-align: center;
   font-size: var(--h1-font-size);
@@ -231,6 +249,7 @@ img {
 .login__forgot:hover {
   text-decoration: underline;
 }
+
 .login__button {
   width: 100%;
   padding: 1rem;
@@ -239,7 +258,14 @@ img {
   font-weight: var(--font-medium);
   cursor: pointer;
   margin-bottom: 2rem;
+  border: 10px solid transparent;
+  transition: border-color 0.3s ease-in-out;
 }
+
+.login__button:hover {
+  animation: borderAnimation 4s infinite linear;
+}
+
 .login__register {
   text-align: center;
 }
