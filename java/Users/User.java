@@ -1,4 +1,4 @@
-package java.users;
+package java.Users;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -76,4 +76,8 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    // registration
+    // login
+    // updateUserInfo
+    // logout
 }
