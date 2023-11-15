@@ -3,6 +3,7 @@ package java.Users;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.service.serviceLogin;
 import java.service.serviceRegistration;
 
 /**
@@ -84,7 +85,12 @@ public class User {
         registration.userRegistration(null);
 
     }
+
     // login
+    public void userLogin() {
+        serviceLogin login = new serviceLogin();
+        login.logUserIn(null);
+    }
     // updateUserInfo
     // logout
 }

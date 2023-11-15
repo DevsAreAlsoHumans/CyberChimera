@@ -2,11 +2,18 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3000;
+const session = require('express-session');
 const bodyParser = require('body-parser');
 
 app.use(express.static(path.join(__dirname,"assets")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use(session({
+    secret: 'votre_secret_key',
+    resave: false,
+    saveUninitialized: true
+}));
 
 const db = require('./assets/js/database');
 
