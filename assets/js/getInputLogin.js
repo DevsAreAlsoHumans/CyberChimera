@@ -2,7 +2,7 @@ document.getElementById("login__form").addEventListener("submit", function (even
     event.preventDefault();
 
     var email = document.getElementById("login-email").value;
-    var password = document.getElementById("login-pass").value;
+    var password = document.getElementById("pass").value;
 
     fetch('http://localhost:3000/connexion_compte', {
         method: 'POST',

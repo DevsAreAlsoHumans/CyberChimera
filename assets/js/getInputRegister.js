@@ -3,7 +3,7 @@ document.getElementById("register__form").addEventListener("submit", function (e
 
     var pseudo = document.getElementById("register-pseudo").value;
     var email = document.getElementById("register-email").value;
-    var password = document.getElementById("register-pass").value;
+    var password = document.getElementById("pass").value;
 
     fetch('http://localhost:3000/ajout_compte', {
         method: 'POST',
