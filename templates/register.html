@@ -16,9 +16,9 @@
       <header class="header">
          <nav>
             <ul class="navbar">
-               <li><a href="../templates/home.html">Accueil</a></li>
-               <li><a href="../templates/login.html">Connexion</a></li>
-               <li><a href="../templates/register.html">Inscription</a></li>
+               <li><a href="/">Accueil</a></li>
+               <li><a href="login">Connexion</a></li>
+               <li><a href="register">Inscription</a></li>
             </ul>
          </nav>
 
@@ -28,7 +28,7 @@
       <div class="register">
          <img src="../img/font_page_register.png" alt="register image" class="register__img">
 
-         <form action="" class="register__form" id="register__form">
+         <form class="register__form" id="register__form" method="psot">
             <h1 class="register__title">Register</h1>
 
             <div class="register__content">
@@ -55,9 +55,9 @@
                   <i class="ri-lock-2-line register__icon"></i>
 
                   <div class="register__box-input">
-                     <input type="password" required class="register__input" id="register-pass" placeholder=" ">
-                     <label for="register-pass" class="register__label">Mot de passe</label>
-                     <i class="ri-eye-off-line register__eye" id="register-eye"></i>
+                     <input type="password" required class="register__input" id="pass" placeholder=" ">
+                     <label for="pass" class="register__label">Mot de passe</label>
+                     <i class="ri-eye-off-line register__eye" id="eye"></i>
                   </div>
                </div>
             </div>
@@ -69,9 +69,9 @@
             </p>
          </form>
       </div>
-      
+
       <!--=============== MAIN JS ===============-->
-      <script src="../js/getInputRegister.js"></script>
-      <script src="../js/main.js"></script>
+      <script src="/js/getInputRegister.js"></script>
+      <script src="/js/main.js"></script>
    </body>
 </html>

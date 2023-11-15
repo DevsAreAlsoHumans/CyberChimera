@@ -1,13 +1,22 @@
-document.getElementById("register__form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Empêcher le comportement par défaut du formulaire (rechargement de la page)
- 
-    // Récupérer les valeurs des champs
+document.getElementById("register__form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
     var pseudo = document.getElementById("register-pseudo").value;
     var email = document.getElementById("register-email").value;
     var password = document.getElementById("register-pass").value;
- 
-    // Afficher les valeurs dans la console
-    console.log("pseudo : " + pseudo);
-    console.log("Email: " + email);
-    console.log("Password: " + password);
- });
+
+    fetch('http://localhost:3000/ajout_compte', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ pseudo, email, password }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+});
