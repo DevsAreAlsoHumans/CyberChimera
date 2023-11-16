@@ -18,7 +18,7 @@ document.getElementById("login__form").addEventListener("submit", function (even
                 console.log('mauvais');
                 document.getElementById('errorMessage').textContent = 'Mauvais identifiant ou mot de passe';
             }else{
-                localStorage.setItem("name", data[0].email);
+                localStorage.setItem("name", data.email);
                 window.location.href= "profil";
             }
         })
