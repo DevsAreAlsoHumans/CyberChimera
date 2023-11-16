@@ -91,6 +91,10 @@ public class User {
         serviceLogin login = new serviceLogin();
         login.logUserIn(null);
     }
+
     // updateUserInfo
+    public void updateUserInfo(String user) {
+
+    }
     // logout
 }
