@@ -2,6 +2,8 @@ const mysql = require('mysql');
 const passFunc = require('./assets/js/utils/isPasswodGood');
 const config = require("./config")
 const hash = require('./assets/js/utils/hashPassword');
+const User = require('./assets/js/user');
+const res = require('express/lib/response');
 
 class DatabaseFunctions {
     constructor() {
@@ -34,9 +36,10 @@ class DatabaseFunctions {
         this.db.query("SELECT * FROM user WHERE email = ?", [email], (err, result) => {
             if (err) throw err;
             if (result.length!= 0) { 
-                const user = passFunc.is_password_good(password,result);
+                const userTest = new User.User(result[0].pseudo,result[0].email,result[0].salt,result[0].password)
+                const user = passFunc.is_password_good(password,userTest);
                 if (user != false)  {
-                    callback(result);
+                    callback(user);
                 }
                 else {
                     console.log("NOT CONNECTED")
