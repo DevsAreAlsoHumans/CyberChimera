@@ -14,6 +14,7 @@ document.getElementById("register__form").addEventListener("submit", function (e
     })
         .then(response => response.json())
         .then(data => {
+            document.getElementById('valideMessage').textContent = 'Enregistrement réussi !';
             console.log('Success:', data);
         })
         .catch((error) => {

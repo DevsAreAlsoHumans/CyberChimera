@@ -208,7 +208,7 @@ img {
   color: rgb(6, 245, 6);
   margin: auto;
   margin-bottom: 0.5rem;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
