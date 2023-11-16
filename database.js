@@ -42,6 +42,9 @@ class DatabaseFunctions {
                     console.log("NOT CONNECTED")
                     callback({success:false})
                 }
+            }else{
+                console.log("NOT CONNECTED")
+                callback({success:false})
             }
         });
     }

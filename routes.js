@@ -18,7 +18,6 @@ class Routes {
 
       this.app.post('/recup_compte', (req, res) => {
         const email = req.body.email;
-        
         this.db.recupCompte(email, (result) => {
           res.json(result);
         });
