@@ -10,12 +10,14 @@ db.connect((err) => {
 });
 
 function ajoutCompte(pseudo, email, password, callback) {
-    [hashedpassword,salt] = authUtils.hash_password(password);
-    console.log(hashedpassword)
-    db.query("INSERT INTO user (pseudo, email, password,salt) VALUES (?, ?, ?, ?)", [pseudo, email, hashedpassword,salt], (err, result) => {
-        if (err) throw err;
-        console.log(result);
-        callback(result);
+    [hashedpassword, salt] = authUtils.hash_password(password);
+    db.query("INSERT INTO user (pseudo, email, password, salt) VALUES (?, ?, ?, ?)", [pseudo, email, hashedpassword, salt], (err, result) => {
+        if (err) {
+            callback({ success: false, message: "Une erreur s'est produite lors de l'inscription." });
+        } else {
+            callback({ success: true, message: "Inscription réussie !" });
+            
+        }
     });
 }
 

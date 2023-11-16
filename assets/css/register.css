@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 10
 }
 
 .navbar a {
@@ -203,6 +203,16 @@ img {
   cursor: pointer;
   margin-bottom: 2rem;
 }
+
+.valideMessage {
+  color: rgb(6, 245, 6);
+  margin: auto;
+  margin-bottom: 0.5rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
 .register__register {
   text-align: center;
 }
