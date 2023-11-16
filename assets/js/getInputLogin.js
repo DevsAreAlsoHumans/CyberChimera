@@ -17,7 +17,7 @@ document.getElementById("login__form").addEventListener("submit", function (even
             if (data.success == false){
             }else{
                 localStorage.setItem("name", data[0].pseudo);
-
+                window.location.href= "profil";
             }
         })
         .catch((error) => {

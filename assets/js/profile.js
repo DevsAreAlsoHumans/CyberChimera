@@ -9,5 +9,5 @@ document.getElementById("login__title").textContent = document.getElementById("l
 document.getElementById("logout").addEventListener("submit", (event)=>{
     event.preventDefault();
     localStorage.setItem("name","")
-    location.reload()
-})
+    window.location.href= "acceuil";
+acceuil})
