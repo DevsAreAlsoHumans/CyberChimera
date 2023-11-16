@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const database = require('./database')
-const route = require('./routes')
+const database = require('./Model/database')
+const route = require('./Controllers/routes')
 
 class Server {
   constructor() {
@@ -10,7 +10,7 @@ class Server {
     this.port = 3000;
 
     // Middleware
-    this.app.use(express.static(path.join(__dirname, 'assets')));
+    this.app.use(express.static(path.join(__dirname, 'public')));
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(bodyParser.json());
 

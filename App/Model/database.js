@@ -1,7 +1,7 @@
 const mysql = require('mysql');
-const passFunc = require('./assets/js/utils/isPasswodGood');
-const config = require("./config")
-const hash = require('./assets/js/utils/hashPassword');
+const passFunc = require('../utils/isPasswodGood');
+const config = require("../Security/config")
+const hash = require('../utils/hashPassword');
 
 class DatabaseFunctions {
     constructor() {

@@ -3,7 +3,6 @@ class Routes {
       this.app = app;
       this.db = db;
     }
-  
     setup() {
       // Ajout des routes ici
       this.app.post('/ajout_compte', (req, res) => {
@@ -32,23 +31,23 @@ class Routes {
       });
   
       this.app.get('/acceuil', (req, res) => {
-        res.sendFile(__dirname + '/templates/acceuil.html');
+        res.sendFile(__dirname.replace('Controllers', '') + "/templates/acceuil.html");
       });
   
       this.app.get('/login', (req, res) => {
-        res.sendFile(__dirname + '/templates/login.html');
+        res.sendFile(__dirname.replace('Controllers', '') + '/templates/login.html');
       });
   
       this.app.get('/register', (req, res) => {
-        res.sendFile(__dirname + '/templates/register.html');
+        res.sendFile(__dirname.replace('Controllers', '') + '/templates/register.html');
       });
   
       this.app.get('/profil', (req, res) => {
-        res.sendFile(__dirname + '/templates/profil.html');
+        res.sendFile(__dirname.replace('Controllers', '') + '/templates/profil.html');
       });
   
       this.app.get('/', (req, res) => {
-        res.sendFile(__dirname + '/templates/error404.html');
+        res.sendFile(__dirname.replace('Controllers', '') + '/templates/error404.html');
       });
     }
   }
