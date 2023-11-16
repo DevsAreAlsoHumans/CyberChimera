@@ -20,30 +20,32 @@ class DatabaseFunctions {
   
     ajoutCompte(pseudo, email, password, callback) {
         const [hashedpassword, salt] = hash.hash_password(password);
-        this.db.query(
-        'INSERT INTO user (pseudo, email, password, salt) VALUES (?, ?, ?, ?)',
-        [pseudo, email, hashedpassword, salt],
-        (err, result) => {
-            if (err) throw err;
-            console.log(result);
-            callback(result);
+        this.db.query("INSERT INTO user (pseudo, email, password, salt) VALUES (?, ?, ?, ?)", [pseudo, email, hashedpassword, salt], (err, result) => {
+            if (err) {
+                callback({ success: false, message: "Une erreur s'est produite lors de l'inscription." });
+            } else {
+                callback({ success: true, message: "Inscription réussie !" });
+                
+            }
         });
     }
   
-    connexionCompte(email, password, callback, req) {
-        this.db.query('SELECT * FROM user WHERE email = ?', [email], (err, result) => {
+    connexionCompte(email, password, callback) {
+        this.db.query("SELECT * FROM user WHERE email = ?", [email], (err, result) => {
             if (err) throw err;
-            if (result.length !== 0) {
-                const userConnected = passFunc.is_password_good(password, result[0]);
-                if (userConnected !== false) {
-                    console.log('Connecté');
-                } else {
-                    console.log('NON CONNECTÉ');
+            if (result.length!= 0) { 
+                const user = passFunc.is_password_good(password,result);
+                if (user != false)  {
+                    callback(result);
+                }
+                else {
+                    console.log("NOT CONNECTED")
+                    callback({success:false})
                 }
             }
-        callback(result);
         });
     }
+    
 }
 
 

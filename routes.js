@@ -20,7 +20,7 @@ class Routes {
         const email = req.body.email;
         const password = req.body.password;
   
-        this.db.connexionCompte(email, password, req, (result) => {
+        this.db.connexionCompte(email, password, (result) => {
           res.json(result);
         });
       });
