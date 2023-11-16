@@ -47,6 +47,10 @@ class Routes {
         res.sendFile(__dirname + '/templates/profil.html');
       });
   
+      this.app.get('/game', (req, res) => {
+        res.sendFile(__dirname + '/templates/game.html');
+      });
+
       this.app.get('/', (req, res) => {
         res.sendFile(__dirname + '/templates/error404.html');
       });
