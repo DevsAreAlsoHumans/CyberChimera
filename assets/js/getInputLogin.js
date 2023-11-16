@@ -16,7 +16,7 @@ document.getElementById("login__form").addEventListener("submit", function (even
             console.log('Success:', data);
             if (data.success == false){
             }else{
-                localStorage.setItem("name", data[0].pseudo);
+                localStorage.setItem("name", data[0].email);
                 window.location.href= "profil";
             }
         })

@@ -45,6 +45,16 @@ class DatabaseFunctions {
             }
         });
     }
+
+    recupCompte(email,callback){
+        this.db.query("SELECT * FROM user WHERE email = ?", [email], (err, result) => {
+            if (err) throw err;
+            if (result.length!= 0) { 
+                callback(result)
+            }
+        });
+
+    }
     
 }
 
