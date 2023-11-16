@@ -266,6 +266,15 @@ img {
   animation: borderAnimation 4s infinite linear;
 }
 
+.errorMessage {
+    color: red;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .login__register {
   text-align: center;
 }

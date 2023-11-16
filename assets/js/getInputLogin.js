@@ -1,6 +1,6 @@
 document.getElementById("login__form").addEventListener("submit", function (event) {
     event.preventDefault();
-
+    console.log("aaaaa")
     var email = document.getElementById("login-email").value;
     var password = document.getElementById("pass").value;
 
@@ -15,6 +15,8 @@ document.getElementById("login__form").addEventListener("submit", function (even
         .then(data => {
             console.log('Success:', data);
             if (data.success == false){
+                console.log('mauvais');
+                document.getElementById('errorMessage').textContent = 'Mauvais identifiant ou mot de passe';
             }else{
                 localStorage.setItem("name", data[0].pseudo);
                 window.location.href= "profil";
