@@ -1,61 +1,36 @@
 const express = require('express');
 const path = require('path');
-const app = express();
-const port = 3000;
-const session = require('express-session');
 const bodyParser = require('body-parser');
+const database = require('./database')
+const route = require('./routes')
 
-app.use(express.static(path.join(__dirname,"assets")));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+class Server {
+  constructor() {
+    this.app = express();
+    this.port = 3000;
 
-app.use(session({
-    secret: 'votre_secret_key',
-    resave: false,
-    saveUninitialized: true
-}));
+    // Middleware
+    this.app.use(express.static(path.join(__dirname, 'assets')));
+    this.app.use(bodyParser.urlencoded({ extended: true }));
+    this.app.use(bodyParser.json());
 
-const db = require('./assets/js/database');
+    // Database
+    this.db = new database.DatabaseFunctions();
 
-app.post('/ajout_compte', (req, res) => {
-    const pseudo = req.body.pseudo;
-    const email = req.body.email;
-    const password = req.body.password;
+    // Routes
+    this.setupRoutes();
 
-    db.ajoutCompte(pseudo, email, password, (result) => {
-        res.json(result);
+    // Start the server
+    this.app.listen(this.port, () => {
+      console.log(`Le serveur est lancé sur http://localhost:${this.port}/acceuil`);
     });
-});
+  }
 
-app.post('/connexion_compte', (req, res) => {
-    const email = req.body.email;
-    const password = req.body.password;
+  setupRoutes() {
+    const routes = new route.Routes(this.app, this.db);
+    routes.setup();
+  }
+}
 
-    db.connexionCompte(email, password, (result) => {
-        res.json(result);
-    });
-});
-
-// Route pour "/documents"
-app.get('/acceuil', (req, res) => {
-    res.sendFile(__dirname+'/templates/acceuil.html');
-});
-
-// Route pour "/login"
-app.get('/login', (req, res) => {
-    res.sendFile(__dirname+"/templates/login.html");
-});
-
-// Route pour "/register"
-app.get('/register', (req, res) => {
-    res.sendFile(__dirname + '/templates/register.html');
-});
-
-// Route pour "/profil"
-app.get('/profil', (req, res) => {
-    res.sendFile(__dirname + '/templates/profil.html');
-});
-
-app.listen(port, () => {
-    console.log(`Le serveur est lancé sur http://localhost:${port}/acceuil`);
-});
+// Démarrage du serveur
+const server = new Server();
