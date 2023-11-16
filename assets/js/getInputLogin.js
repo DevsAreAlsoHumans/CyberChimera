@@ -14,6 +14,11 @@ document.getElementById("login__form").addEventListener("submit", function (even
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
+            if (data.success == false){
+            }else{
+                localStorage.setItem("name", data[0].pseudo);
+
+            }
         })
         .catch((error) => {
             console.error('Error:', error);

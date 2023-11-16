@@ -30,8 +30,8 @@ app.post('/ajout_compte', (req, res) => {
 app.post('/connexion_compte', (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
-
     db.connexionCompte(email, password, (result) => {
+        console.log(result);
         res.json(result);
     });
 });

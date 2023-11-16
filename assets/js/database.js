@@ -27,16 +27,14 @@ function connexionCompte(email, password, callback) {
         if (result.length!= 0) { 
             user = authUtils.is_password_good(password,result);
             if (user != false)  {
-                req.session.user = {
-                    pseudo: user.pseudo,
-                    email: user.email
-                };
+                callback(result);
             }
             else {
                 console.log("NOT CONNECTED")
+                callback({success:false})
+
             }
         }
-        callback(result);
     });
 }
 

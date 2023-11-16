@@ -1,4 +1,4 @@
-
+<?php var name =  localStorage.getItem('name'); ?>
 <!DOCTYPE html>
    <html lang="en">
    <head>
@@ -22,7 +22,7 @@
                <li><a href="login">Connexion</a></li>
                <li><a href="register">Inscription</a></li>
                <li><a href="profil">Profil</a></li>
-               <li><button class="button__logout" role="button">Déconnexion</button></li>
+               <li><form id="logout"><button class="button__logout" id="logout" role="button" type="submit">Déconnexion</button></form></li>
             </ul>
          </nav>
       </header>
@@ -31,12 +31,12 @@
          <img src="../img/font_page_login.png" alt="login image" class="login__img">
 
          <form action="" class="login__form" id="login__form">
-            <h1 class="login__title">Bonjour " "</h1>
+            <h1 id="login__title" class="login__title">Bonjour </h1>
 
             <div class="profil">
-                <p>Email : <?php echo $email; ?> </p>
+                <p id="email">Email : <?php echo $email; ?> </p>
                 <br>
-                <p>Pseudo : <?php echo $pseudo; ?> </p>
+                <p id="name">Pseudo : </p>
             </div>
 
 
@@ -44,7 +44,7 @@
       </div>
       
       <!--=============== MAIN JS ===============-->
-      <script src="../js/getInputLogin.js"></script>
+      <script src="../js/profile.js"></>
       <script src="../js/main.js"></script>
    </body>
 </html>
