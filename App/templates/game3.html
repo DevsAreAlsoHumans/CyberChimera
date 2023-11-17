@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="../css/game3.css">
 </head>
 <body>
+    <header class="header">
+        <nav>
+           <ul class="navbar">
+              <li><a href="acceuil">Accueil</a></li>
+              <li><a href="login">Connexion</a></li>
+              <li><a href="register">Inscription</a></li>
+              <li><a id="interface" href="games">Games</a></li>
+              <li><a id="profil" href="profil">Profil</a></li>
+           </ul>
+        </nav>
+     </header>
+     
     <script type="text/javascript">  
         var sessionName = localStorage.getItem('name');
         if (sessionName == ""|| sessionName == null) {
