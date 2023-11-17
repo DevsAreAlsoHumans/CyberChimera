@@ -66,6 +66,14 @@ li {
   list-style: none;
 }
 
+.logo_cyberchimera {
+  width: 20%; 
+  height: auto; 
+  max-height: 40px; 
+  max-width: 150px; 
+}
+
+
 .button__logout {
   position: absolute;
   right: 0;
@@ -172,6 +180,7 @@ img {
 .login__form:hover {
   animation: borderAnimation 4s infinite linear;
 }
+
 
 
 
