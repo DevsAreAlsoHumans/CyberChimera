@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game 2</title>
+    <link rel="stylesheet" href="../css/game5.css">
+</head>
+<body>
+    <script type="text/javascript">  
+        var sessionName = localStorage.getItem('name');
+        if (sessionName == ""|| sessionName == null) {
+           window.location.href = 'acceuil';
+        }
+     </script>
+    <header class="header">
+        <nav>
+           <ul class="navbar">
+              <li><a href="acceuil">Accueil</a></li>
+              <li><a href="login">Connexion</a></li>
+              <li><a href="register">Inscription</a></li>
+              <li><a id="interface" href="games">Games</a></li>
+              <li><a id="profil" href="profil">Profil</a></li>
+           </ul>
+        </nav>
+     </header>
+     
+     <div class="container">
+        <div id="score"></div>
+      </div>
+      
+      <div class="message"><b style="color:#999">Comment jouer</b>, inclinez l'écran avec votre souris et déplacez la sphère vers le carré <br> attention aux trous dans le sol :)</div>
+
+    <script src="../js/game5.js"></script>
+</body>
+</html>
