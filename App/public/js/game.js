@@ -1131,6 +1131,7 @@ let parameters = {
     { name: "arrowDown", id: 15, collision: false }
   ],
   maps: [
+    
     // map 1
     {
       name: "map_1",
