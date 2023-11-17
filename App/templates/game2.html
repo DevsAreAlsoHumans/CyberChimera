@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="../css/game2.css">
 </head>
 <body>
+    <script type="text/javascript">  
+        var sessionName = localStorage.getItem('name');
+        if (sessionName == "") {
+           window.location.href = 'acceuil';
+        }
+     </script>
     <header class="header">
         <nav>
            <ul class="navbar">
