@@ -9,7 +9,7 @@
 <body>
     <script type="text/javascript">  
         var sessionName = localStorage.getItem('name');
-        if (sessionName == "") {
+        if (sessionName == ""|| sessionName == null) {
            window.location.href = 'acceuil';
         }
      </script>
