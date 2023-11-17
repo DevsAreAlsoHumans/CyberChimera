@@ -55,7 +55,7 @@ class Routes {
         res.sendFile(__dirname.replace('Controllers', '') + '/templates/game2.html');
       });
 
-      this.app.get('/', (req, res) => {
+      this.app.get('*', (req, res) => {
         res.sendFile(__dirname.replace('Controllers', '') + '/templates/error404.html');
       });
     }
@@ -63,4 +63,4 @@ class Routes {
   
 module.exports = {
     Routes
-};
+};  
