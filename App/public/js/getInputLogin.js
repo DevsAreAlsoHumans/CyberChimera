@@ -1,6 +1,5 @@
 document.getElementById("login__form").addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log("aaaaa")
     var email = document.getElementById("login-email").value;
     var password = document.getElementById("pass").value;
 
