@@ -17,7 +17,7 @@
    <body>
       <script type="text/javascript">  
          var sessionName = localStorage.getItem('name');
-         if (sessionName == "") {
+         if (sessionName == ""|| sessionName == null) {
             window.location.href = 'acceuil';
          }
       </script>
@@ -35,7 +35,7 @@
       </header>
 
       <div class="login">
-         <img src="../img/font_page_login.png" alt="login image" class="login__img">
+         <img src="../img/fond_page_profil.jpg" alt="login image" class="login__img">
 
          <form action="" class="login__form" id="login__form">
             <h1 id="login__title" class="login__title">Bonjour </h1>
