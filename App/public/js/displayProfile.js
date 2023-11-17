@@ -6,14 +6,8 @@ if (localStorage.getItem("name")!= ""){
  }
 
 if (localStorage.getItem("name")!= ""){
-   document.getElementById("game").style.display = "flex"
+   document.getElementById("interface").style.display = "flex"
 }else{
-   document.getElementById("game").style.display = "none"
-}
-
-if (localStorage.getItem("name")!= ""){
-   document.getElementById("game2").style.display = "flex"
-}else{
-   document.getElementById("game2").style.display = "none"
+   document.getElementById("interface").style.display = "none"
 }
  
