@@ -290,6 +290,25 @@ img {
 }
 
 
+.login__button4{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border: 4px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+  color: white; 
+  font-size: 2rem;
+
+  background: url('../img/game4.png') center center no-repeat;
+  background-size: cover;
+}
+
+.login__button4:hover {
+  animation: borderAnimation 4s infinite linear;
+}
+
 .errorMessage {
     color: red;
     margin: auto;
@@ -329,7 +348,6 @@ img {
     justify-content: center;
   }
   .login__form {
-    width: 432px;
     padding: 4rem 3rem 3.5rem;
     border-radius: 1.5rem;
   }

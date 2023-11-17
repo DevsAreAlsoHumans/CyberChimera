@@ -66,12 +66,13 @@ li {
   list-style: none;
 }
 
-.logo_cyberchimera {
-  width: 20%; 
-  height: auto; 
-  max-height: 40px; 
-  max-width: 150px; 
+
+img {
+  max-width: 100%;
+  height: auto;
 }
+
+
 
 
 .button__logout {
@@ -137,10 +138,7 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 
 /*=============== LOGIN ===============*/
 .login {
