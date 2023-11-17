@@ -66,6 +66,15 @@ li {
   list-style: none;
 }
 
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
 .button__logout {
   position: absolute;
   right: 0;
@@ -129,10 +138,7 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 
 /*=============== LOGIN ===============*/
 .login {
@@ -172,6 +178,7 @@ img {
 .login__form:hover {
   animation: borderAnimation 4s infinite linear;
 }
+
 
 
 

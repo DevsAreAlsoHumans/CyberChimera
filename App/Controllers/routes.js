@@ -55,8 +55,13 @@ class Routes {
         res.sendFile(__dirname.replace('Controllers', '') + '/templates/game2.html');
       });
 
+<<<<<<< HEAD
       this.app.get('/game3', (req, res) => {
         res.sendFile(__dirname.replace('Controllers', '') + '/templates/game3.html');
+=======
+      this.app.get('/game4', (req, res) => {
+        res.sendFile(__dirname.replace('Controllers', '') + '/templates/game4.html');
+>>>>>>> 987833870191e3ab41853e8f51f451d4d08246cf
       });
 
       this.app.get('/games', (req, res) => {
