@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>game 2</title>
-    <link rel="stylesheet" href="../css/game2.css">
+    <title>game 3</title>
+    <link rel="stylesheet" href="../css/game3.css">
 </head>
 <body>
-    <script type="text/javascript">  
-        var sessionName = localStorage.getItem('name');
-        if (sessionName == ""|| sessionName == null) {
-           window.location.href = 'acceuil';
-        }
-     </script>
     <header class="header">
         <nav>
            <ul class="navbar">
@@ -25,13 +19,14 @@
         </nav>
      </header>
      
-
-    <canvas id="canvas"></canvas>
-
-    <p>
-      Use the left, right and up arrow keys to move.
-    </p>
-    
-    <script src="../js/game2.js"></script>
+    <script type="text/javascript">  
+        var sessionName = localStorage.getItem('name');
+        if (sessionName == ""|| sessionName == null) {
+           window.location.href = 'acceuil';
+        }
+     </script>
+    <h3>Game 3</h3>
+    <canvas id="stage" height="400" width="520"></canvas>
+        <script src="../js/game3.js"></script>
 </body>
 </html>

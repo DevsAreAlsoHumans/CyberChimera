@@ -289,6 +289,24 @@ img {
   animation: borderAnimation 4s infinite linear;
 }
 
+.login__button3 {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border: 4px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+  color: white; 
+  font-size: 2rem;
+
+  background: url('../img/game3.png') center center no-repeat;
+  background-size: cover;
+}
+
+.login__button3:hover {
+  animation: borderAnimation 4s infinite linear;
+}
 
 .login__button4{
   width: 100%;
