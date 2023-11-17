@@ -289,7 +289,7 @@ img {
   animation: borderAnimation 4s infinite linear;
 }
 
-.login__button3 {
+.login__button2 {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -304,9 +304,10 @@ img {
   background-size: cover;
 }
 
-.login__button3:hover {
+.login__button2:hover {
   animation: borderAnimation 4s infinite linear;
 }
+
 
 .login__button4{
   width: 100%;
