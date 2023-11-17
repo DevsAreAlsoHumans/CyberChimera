@@ -3,8 +3,9 @@ class Routes {
       this.app = app;
       this.db = db;
     }
+
     setup() {
-      // Ajout des routes ici
+
       this.app.post('/ajout_compte', (req, res) => {
         const pseudo = req.body.pseudo;
         const email = req.body.email;
